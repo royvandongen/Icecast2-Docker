@@ -1,0 +1,70 @@
+<icecast>
+        <limits>
+                <clients>500</clients>
+                <sources>8</sources>
+                <threadpool>5</threadpool>
+                <queue-size>524288</queue-size>
+                <client-timeout>30</client-timeout>
+                <header-timeout>15</header-timeout>
+                <source-timeout>10</source-timeout>
+                <burst-on-connect>1</burst-on-connect>
+                <burst-size>65535</burst-size>
+        </limits>
+
+        <authentication>
+                <source-password>changeme</source-password>
+                <relay-password>changeme</relay-password>
+
+                <admin-user>changeme</admin-user>
+                <admin-password>changeme</admin-password>
+        </authentication>
+
+        <hostname>changeme</hostname>
+        <location>changeme</location>
+        <admin>changeme</admin>
+        <server-id>changeme</server-id>
+
+        <listen-socket>
+            <bind-address>0.0.0.0</bind-address>
+            <port>8000</port>
+        </listen-socket>
+
+        <mount>
+                <mount-name>changeme</mount-name>
+                <password>changeme</password>
+                <public>1</public>
+                <stream-name>changeme</stream-name>
+                <hidden>0</hidden>
+                <stream-url>changeme</stream-url>
+                <genre>changeme</genre>
+        </mount>
+
+        <fileserve>1</fileserve>
+
+        <paths>
+                <basedir>/usr/share/icecast2</basedir>
+                <logdir>/var/log/icecast2</logdir>
+                <webroot>/usr/share/icecast2/web</webroot>
+                <adminroot>/usr/share/icecast2/admin</adminroot>
+                <alias source="/" dest="/status.xsl"/>
+                <pidfile>/var/run/icecast/icecast.pid</pidfile>
+        </paths>
+
+        <logging>
+                <accesslog>access.log</accesslog>
+                <errorlog>error.log</errorlog>
+                <loglevel>3</loglevel> <!-- 4 Debug, 3 Info, 2 Warn, 1 Error -->
+                <logsize>10000</logsize> <!-- Max size of a logfile -->
+                <!-- <logarchive>1</logarchive> -->
+        </logging>
+
+        <security>
+                <chroot>0</chroot>
+                <!--
+                <changeowner>
+                        <user>nobody</user>
+                        <group>nogroup</group>
+                </changeowner>
+                -->
+        </security>
+</icecast>
