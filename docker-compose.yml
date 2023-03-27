@@ -1,0 +1,9 @@
+icecast:
+  image: royvandongen/icecast2-docker:latest
+  volumes:
+    - logs:/var/log/icecast2
+    - /etc/localtime:/etc/localtime:ro
+  volumes:
+    - $PWD/icecast.xml:/etc/icecast2/icecast.xml:ro
+  ports:
+    - 8000:8000
