@@ -14,7 +14,7 @@ RUN apt-get -qq -y update;\
     chown -R icecast2 /etc/icecast2; \
     sed -i "s#ENABLE=.*#ENABLE=true#" /etc/default/icecast2
 
-COPY robots.txt /usr/share/icecast2/web/robots.txt
+ADD robots.txt /usr/share/icecast2/web/robots.txt
 
 USER icecast2
 
